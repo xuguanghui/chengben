@@ -1,7 +1,10 @@
 package com.tdt.modular.base.model.params;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 import cn.stylefeng.roses.kernel.model.validator.BaseValidatingParam;
+
+import java.math.BigDecimal;
 import java.util.Date;
 import java.io.Serializable;
 
@@ -28,6 +31,7 @@ public class SupplierParam implements Serializable, BaseValidatingParam {
      * 名称
      */
     private String name;
+    private String sname;
 
     /**
      * 联系人
@@ -78,6 +82,13 @@ public class SupplierParam implements Serializable, BaseValidatingParam {
      * 修改时间
      */
     private Date updatetime;
+
+    private Long categoryid;
+
+    private String categoryname;
+
+    private BigDecimal contractsum;
+    private BigDecimal tax;
 
     @Override
     public String checkParam() {

@@ -19,7 +19,9 @@ layui.use(['table', 'ax', 'func'], function () {
             {type: 'checkbox'},
             {field: 'id', hide: true, title: '编号'},
             {field: 'name', sort: true, title: '供应商名称'},
-            {field: 'contact', sort: true, title: '联系人'},
+            {field: 'sname', sort: true, title: '简称'},
+            {field: 'contractsum', sort: true, title: '合同总价'},
+            {field: 'tax', sort: true, title: '税点'},
             {field: 'phone', sort: true, title: '联系电话'},
             {field: 'remark', sort: true, title: '备注'},
             {align: 'center', toolbar: '#tableBar', title: '操作',fixed: 'right'}
