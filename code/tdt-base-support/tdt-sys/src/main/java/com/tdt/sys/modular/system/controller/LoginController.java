@@ -76,7 +76,7 @@ public class LoginController extends BaseController {
 
         List<Long> warehouseList=user.getWarehouses();
         if(warehouseList==null || warehouseList.size() == 0 ){
-            ShiroKit.getSubject().logout();
+            //ShiroKit.getSubject().logout();
             model.addAttribute("tips", "该用户没有仓库信息权限，无法登陆,请联系管理员");
             return "/login.html";
         }else if(warehouseList.size()==1){

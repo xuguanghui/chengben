@@ -6,6 +6,7 @@
     <resultMap id="BaseResultMap" type="com.tdt.modular.base.entity.Supplier">
         <id column="id" property="id" />
         <result column="name" property="name" />
+        <result column="sname" property="sname" />
         <result column="contact" property="contact" />
         <result column="phone" property="phone" />
         <result column="remark" property="remark" />

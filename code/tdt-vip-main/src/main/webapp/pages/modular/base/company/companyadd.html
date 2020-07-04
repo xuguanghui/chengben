@@ -1,0 +1,37 @@
+@layout("/common/_container.html",{title:"新增项目信息",bg:"bg-white",js:["/assets/modular/base/company/companyadd.js"]}){
+<div class="layui-form model-form" id="form-psw">
+    <div class="layui-form-item">
+        <label class="layui-form-label">公司名称全称:</label>
+        <div class="layui-input-block">
+            <input type="text" name="companyfullname" placeholder="请输入公司名称全称" class="layui-input"
+                   lay-verType="tips" lay-verify="required" required/>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">公司名称简称:</label>
+        <div class="layui-input-block">
+            <input type="text" name="companyshortname" placeholder="请输入公司名称简称" class="layui-input"
+                   lay-verType="tips" lay-verify="required" required/>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">项目名称全称:</label>
+        <div class="layui-input-block">
+            <input type="text" name="projectfullname" placeholder="请输入项目名称全称" class="layui-input"
+                   lay-verType="tips" lay-verify="required" required/>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">项目名称简称:</label>
+        <div class="layui-input-block">
+            <input type="text" name="projectshortname" placeholder="请输入项目名称简称" class="layui-input"
+                   lay-verType="tips" lay-verify="required" required/>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block text-right">
+            <button class="layui-btn" lay-filter="submit-psw" lay-submit>保存</button>
+        </div>
+    </div>
+</div>
+@}

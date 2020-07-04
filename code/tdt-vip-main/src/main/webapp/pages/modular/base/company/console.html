@@ -1,0 +1,85 @@
+@layout("/common/_container.html",{js:["/assets/modular/base/company/company.js"],css:["/assets/modular/base/company/company.css"]}){
+
+<!-- 加载动画，移除位置在common.js中 -->
+<div class="page-loading">
+    <div class="ball-loader">
+        <span></span><span></span><span></span><span></span>
+    </div>
+</div>
+
+<!-- 正文开始 -->
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        
+        <div class="layui-col-lg4 layui-col-md5">
+            <div class="layui-card">
+                <div class="layui-card-header">公司项目信息</div>
+                <div class="layui-card-body">
+                    <table class="layui-table layui-text">
+                        <colgroup>
+                            <col width="100">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <td>公司名称</td>
+                            <td>${companyfullname!}</td>
+                        </tr>
+                        <tr>
+                            <td>公司名称简称</td>
+                            <td>${companyshortname!}</td>
+                        </tr>
+                        <tr>
+                            <td>项目名称</td>
+                            <td>${projectfullname!}</td>
+                        </tr>
+                        <tr>
+                            <td>项目名称简称</td>
+                            <td>${projectshortname!}</td>
+                        </tr>
+                        <tr>
+                            <td>主要特色</td>
+                            <td>??????????</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="layui-card">
+                <div class="layui-card-header">后台框架</div>
+                <div class="layui-card-body">
+                    <table class="layui-table layui-text">
+                        <colgroup>
+                            <col width="100">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <td>核心框架</td>
+                            <td>Spring Boot</td>
+                        </tr>
+                        <tr>
+                            <td>视图渲染</td>
+                            <td>Spring MVC、Beetl</td>
+                        </tr>
+                        <tr>
+                            <td>持久层</td>
+                            <td>MyBatis、Druid、MyBatis-Plus
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>权限框架</td>
+                            <td>Shiro、JWT(API接口权限)
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@}
+
+
