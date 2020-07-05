@@ -20,6 +20,7 @@ layui.use(['table', 'ax', 'func'], function () {
             {field: 'id', hide: true, title: '编号'},
             {field: 'name', sort: true, title: '供应商名称'},
             {field: 'sname', sort: true, title: '简称'},
+            {field: 'categoryname', sort: true, title: '材料名称'},
             {field: 'contractsum', sort: true, title: '合同总价'},
             {field: 'tax', sort: true, title: '税点'},
             {field: 'phone', sort: true, title: '联系电话'},

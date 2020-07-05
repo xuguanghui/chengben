@@ -129,11 +129,25 @@ public class ElementController {
         BElement detail = this.elementService.getById(id);
         return ResponseData.success(detail);
     }
+    /**
+     * 查询下拉列表
+     *
+     * @author xgh
+     * @Date 2019-08-19
+     */
+    @ResponseBody
+    @RequestMapping("/listForSelect")
+    public ResponseData listForSelect() {
 
+        QueryWrapper<BElement> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("type","2");
+        List<BElement> list = elementService.list(queryWrapper);
+        return ResponseData.success(list);
+    }
     /**
      * 查询列表
      *
-     * @author chenc
+     * @author xgh
      * @Date 2019-08-19
      */
     @ResponseBody

@@ -101,8 +101,8 @@ public class Supplier implements Serializable {
      */
     @TableField("updatetime")
     private Date updatetime;
-    @TableField("categoryid")
-    private Long categoryid;
+    @TableField("categoryids")
+    private String categoryids;
 
     @TableField("categoryname")
     private String categoryname;

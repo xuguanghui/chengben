@@ -83,7 +83,7 @@ public class SupplierParam implements Serializable, BaseValidatingParam {
      */
     private Date updatetime;
 
-    private Long categoryid;
+    private String categoryids;
 
     private String categoryname;
 

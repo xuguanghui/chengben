@@ -51,9 +51,9 @@
 //
 //        // 数据源配置
 //        DataSourceConfig dsc = new DataSourceConfig();
-//        dsc.setUrl("jdbc:mysql://localhost:3306/wms?useUnicode=true&useSSL=false&characterEncoding=utf8");
+//        dsc.setUrl("jdbc:mysql://127.0.0.1:3306/wms?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT");
 //        // dsc.setSchemaName("public");
-//        dsc.setDriverName("com.mysql.jdbc.Driver");
+//        dsc.setDriverName("com.mysql.cj.jdbc.Driver");
 //        dsc.setUsername("root");
 //        dsc.setPassword("admin");
 //        mpg.setDataSource(dsc);

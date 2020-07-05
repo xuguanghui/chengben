@@ -16,18 +16,18 @@
     <packaging>war</packaging>
 
     <dependencies>
-<!--        <dependency>
-            <groupId>com.github.davidfantasy</groupId>
-            <artifactId>mybatis-plus-generator-ui</artifactId>
-            <version>1.1.2</version>
-            <scope>test</scope>
-        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.github.davidfantasy</groupId>-->
+<!--            <artifactId>mybatis-plus-generator-ui</artifactId>-->
+<!--            <version>1.1.2</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
 <!--  单元测试时 此依赖注释掉-->
-<!--        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-generator</artifactId>
-            <version>3.3.2</version>
-        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.baomidou</groupId>-->
+<!--            <artifactId>mybatis-plus-generator</artifactId>-->
+<!--            <version>3.3.2</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.apache.velocity</groupId>
             <artifactId>velocity-engine-core</artifactId>

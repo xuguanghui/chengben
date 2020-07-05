@@ -17,14 +17,17 @@
         <result column="updateid" property="updateid" />
         <result column="updator" property="updator" />
         <result column="updatetime" property="updatetime" />
+        <result column="categoryids" property="categoryids" />
+        <result column="categoryname" property="categoryname" />
         <result column="contractsum" property="contractsum" />
         <result column="tax" property="tax" />
+
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
         id AS "id", name AS "name", contact AS "contact", phone AS "phone", remark AS "remark", warehouseid AS "warehouseid", createid AS "createid", creator AS "creator", createtime AS "createtime", updateid AS "updateid", updator AS "updator", updatetime AS "updatetime",
-        contractsum AS "contractsum",sname AS "sname",tax AS "tax"
+       categoryids AS "categoryids",categoryname AS "categoryname", contractsum AS "contractsum",sname AS "sname",tax AS "tax"
     </sql>
 
 

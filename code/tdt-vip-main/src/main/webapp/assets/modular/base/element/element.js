@@ -110,6 +110,8 @@ layui.use(['table', 'ax', 'func'], function () {
     var tableResult = table.render({
         elem: '#' + Supplier.tableId,
         url: Feng.ctxPath + '/element/list',
+        height: 'full-20',
+        even:true,
         page: true,
         height: "full-158",
         cellMinWidth: 100,

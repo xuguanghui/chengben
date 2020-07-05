@@ -14,10 +14,28 @@
                         </div>
                     </div>
                     <div class="layui-inline layui-col-md12">
-                        <label class="layui-form-label">联系人<span style="color: red;">*</span></label>
+                        <label class="layui-form-label">简称<span style="color: red;">*</span></label>
                         <div class="layui-input-block">
-                            <input id="contact" name="contact" placeholder="请输入联系人" type="text" class="layui-input" lay-verify="required" required/>
+                            <input id="sname" name="sname" placeholder="请输入简称" type="text" class="layui-input" lay-verify="required" required/>
                         </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">合同总价<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="contractsum" name="contractsum" placeholder="请输入合同总价" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">税点<span style="color: red;">*</span></label>
+                        <div class="layui-input-block">
+                            <input id="tax" name="tax" placeholder="请输入税点" type="text" class="layui-input" lay-verify="required" required/>
+                        </div>
+                    </div>
+                    <div class="layui-inline layui-col-md12">
+                        <label class="layui-form-label">材料类别</label>
+                        <input id="categoryids" name="categoryids" type="hidden" class="layui-input"/>
+                        <input id="categoryname" name="categoryname" type="hidden" class="layui-input"/>
+                        <div class="layui-input-block" id="multiSelect" lay-filter="multiSelect"></div>
                     </div>
                     <div class="layui-inline layui-col-md12">
                         <label class="layui-form-label">联系电话<span style="color: red;">*</span></label>
