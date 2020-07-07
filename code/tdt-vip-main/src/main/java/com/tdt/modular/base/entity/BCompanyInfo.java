@@ -38,5 +38,7 @@ public class BCompanyInfo implements Serializable {
     private String projectshortname;
     @TableField("userid")
     private Long userid;
+    @TableField("orderno")
+    private Integer orderno;
 
 }

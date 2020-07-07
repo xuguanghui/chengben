@@ -5,6 +5,7 @@ import cn.stylefeng.roses.core.reqres.response.ResponseData;
 import cn.stylefeng.roses.core.util.ToolUtil;
 import cn.stylefeng.roses.kernel.model.exception.ServiceException;
 import com.alibaba.fastjson.JSONObject;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.tdt.base.pojo.page.LayuiPageFactory;
 import com.tdt.core.common.constant.Constants;
@@ -13,10 +14,12 @@ import com.tdt.modular.base.entity.Supplier;
 import com.tdt.modular.base.entity.Warehouse;
 import com.tdt.modular.base.service.SupplierService;
 import com.tdt.modular.base.service.WarehouseService;
+import com.tdt.modular.instorage.entity.BStrorein;
 import com.tdt.modular.instorage.entity.Purchase;
 import com.tdt.modular.instorage.entity.PurchaseDetail;
 import com.tdt.modular.instorage.model.params.PurchaseDetailParam;
 import com.tdt.modular.instorage.model.params.PurchaseParam;
+import com.tdt.modular.instorage.service.BStoreinServiceImpl;
 import com.tdt.modular.instorage.service.PurchaseDetailService;
 import com.tdt.modular.instorage.service.PurchaseService;
 import com.tdt.modular.instorage.wrapper.PurchaseWrapper;
@@ -58,6 +61,8 @@ public class StoreInController extends BaseController {
 
     @Autowired
     private PurchaseService purchaseService;
+    @Autowired
+    private BStoreinServiceImpl storeinService;
 
     @Autowired
     private PurchaseDetailService purchaseDetailService;
@@ -89,12 +94,12 @@ public class StoreInController extends BaseController {
      */
     @RequestMapping("/add")
     public String add(Model model) {
-        String purchaseno = SequenceBuilder.generateNo(Constants.PREFIX_NO.PURCHASE_NO);
-        model.addAttribute("purchaseno", purchaseno);
+//        String purchaseno = SequenceBuilder.generateNo(Constants.PREFIX_NO.PURCHASE_NO);
+//        model.addAttribute("purchaseno", purchaseno);
         List<Supplier> suppliers = supplierService.list();
         model.addAttribute("suppliers", suppliers);
-        List<Warehouse> warehouses = warehouseService.list();
-        model.addAttribute("warehouses", warehouses);
+//        List<Warehouse> warehouses = warehouseService.list();
+//        model.addAttribute("warehouses", warehouses);
         return PREFIX + "/purchase_add.html";
     }
 
@@ -105,9 +110,9 @@ public class StoreInController extends BaseController {
      * @Date 2019-08-21
      */
     @RequestMapping("/purchase_detail_add")
-    public String addDetail(Integer id, String purchaseno, Model model) {
+    public String addDetail(Integer id, String orderno, Model model) {
         model.addAttribute("id", id);
-        model.addAttribute("purchaseno", purchaseno);
+        model.addAttribute("orderno", orderno);
         return PREFIX + "/purchaseDetail_add.html";
     }
 
@@ -145,10 +150,10 @@ public class StoreInController extends BaseController {
      */
     @RequestMapping("/addItem")
     @ResponseBody
-    public ResponseData addItem(PurchaseParam purchaseParam) {
-        Purchase purchase=this.purchaseService.add(purchaseParam);
+    public ResponseData addItem(BStrorein bStrorein) {
+        BStrorein entry = storeinService.add(bStrorein);
         HashMap<String, Object> map = new HashMap<>();
-        map.put("purchase", purchase);
+        map.put("bStrorein", entry);
         return ResponseData.success(map);
     }
 
@@ -224,13 +229,12 @@ public class StoreInController extends BaseController {
      */
     @ResponseBody
     @RequestMapping("/list")
-    public Object list(PurchaseParam paramCondition) {
+    public Object list(BStrorein paramCondition) {
         //获取分页参数
-        Page page = LayuiPageFactory.defaultPage();
+        Page<BStrorein> page = LayuiPageFactory.defaultPage();
         //根据条件查询日志
-        List<Map<String, Object>> result = purchaseService.list(page, paramCondition);
-        page.setRecords(new PurchaseWrapper(result).wrap());
-        return LayuiPageFactory.createPageInfo(page);
+        IPage<BStrorein> page1 = storeinService.page(page, null);
+        return LayuiPageFactory.createPageInfo(page1);
     }
 
     /**

@@ -92,4 +92,5 @@ public class ShiroUser implements Serializable {
      */
     private Long warehouseId;
 
+
 }

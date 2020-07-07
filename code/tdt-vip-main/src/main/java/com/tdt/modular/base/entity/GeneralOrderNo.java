@@ -23,6 +23,8 @@ public class GeneralOrderNo implements Serializable {
      */
     @TableField("supplierid")
     private Long supplierid;
+    @TableField("userid")
+    private Long userid;
 
 
     @TableField("ordertype")

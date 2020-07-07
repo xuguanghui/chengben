@@ -7,16 +7,16 @@
             <div class="layui-card-body">
                 <div class="layui-form-item layui-row">
                     <input name="id" type="hidden"/>
-                    <div class="layui-inline layui-col-md6">
+<!--                    <div class="layui-inline layui-col-md6">
                         <label class="layui-form-label" style="width: 100px">采购订单编号<span style="color: red;">*</span></label>
                         <div class="layui-input-inline">
-                            <input id="purchaseno" name="purchaseno" value="${purchaseno!}" placeholder="请输入采购订单编号" type="text" class="layui-input" />
+                            <input id="purchaseno" name="purchaseno" readonly value="${purchaseno!}" placeholder="请输入采购订单编号" type="text" class="layui-input" />
                         </div>
-                    </div>
+                    </div>-->
                     <div class="layui-inline layui-col-md6">
                         <label class="layui-form-label" style="width: 100px">供应商名称<span style="color: red;">*</span></label>
                         <div class="layui-input-inline">
-                            <select id="supplierid" name="supplierid">
+                            <select id="supplierId" name="supplierId">
                                 @for(supplier in suppliers!){
                                 <option value="${supplier.id!}">${supplier.name!}</option>
                                 @}
@@ -34,9 +34,9 @@
                         </div>
                     </div>-->
                     <div class="layui-inline layui-col-md6">
-                        <label class="layui-form-label"style="width: 100px">预计到货时间<span style="color: red;">*</span></label>
+                        <label class="layui-form-label"style="width: 100px">入库时间<span style="color: red;">*</span></label>
                         <div class="layui-input-inline">
-                            <input id="estimatearrivaltime" name="estimatearrivaltime" placeholder="请输入预计到货时间" type="text" class="layui-input" lay-verify="required" required/>
+                            <input id="typeInDate" name="typeInDate" placeholder="请输入入库时间" type="text" class="layui-input" lay-verify="required" required/>
                         </div>
                     </div>
                     <div class="layui-inline layui-col-md6">

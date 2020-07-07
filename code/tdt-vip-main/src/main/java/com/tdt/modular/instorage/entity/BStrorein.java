@@ -1,14 +1,14 @@
 package com.tdt.modular.instorage.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
-import java.time.LocalDate;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.time.LocalDateTime;
 import java.io.Serializable;
+import java.util.Date;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -59,8 +59,9 @@ public class BStrorein implements Serializable {
     /**
      * 入库日期
      */
+    @JsonFormat(pattern="yyyy-MM-dd", timezone="GMT+8")
     @TableField("type_in_date")
-    private LocalDate typeInDate;
+    private Date typeInDate;
 
     /**
      * 供应商id
@@ -72,7 +73,7 @@ public class BStrorein implements Serializable {
      * 创建日期
      */
     @TableField("create_time")
-    private LocalDateTime createTime;
+    private Date createTime;
 
     /**
      * 操作者id
@@ -85,6 +86,8 @@ public class BStrorein implements Serializable {
      */
     @TableField("user_name")
     private String userName;
+    @TableField("remark")
+    private String remark;
 
 
 }

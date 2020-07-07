@@ -19,7 +19,7 @@ layui.use(['table', 'admin', 'ax', 'func','form'], function () {
         return [[
             {type: 'checkbox'},
             {field: 'id', hide: true, title: '编号'},
-            {field: 'purchaseno', sort: true, title: '入库单编号'},
+            {field: 'orderNo', sort: true, title: '入库单编号'},
             {field: 'supplier', sort: true, title: '供应商名称'},
             {field: 'companyName', title: '公司名称'},
             {field: 'projectName', sort: true, title: '项目名称'},
@@ -64,7 +64,7 @@ layui.use(['table', 'admin', 'ax', 'func','form'], function () {
                 func.open({
                     title: '添加入库单详情',
                     tableId: Purchase.tableId,
-                    content: Feng.ctxPath + '/storeIn/purchase_detail_add?id='+admin.getTempData('id') +'&purchaseno='+admin.getTempData('purchaseno') ,
+                    content: Feng.ctxPath + '/storeIn/purchase_detail_add?id='+admin.getTempData('id') +'&orderno='+admin.getTempData('orderno') ,
                 });
             }
         });
