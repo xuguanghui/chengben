@@ -65,7 +65,7 @@ CREATE TABLE `b_company_info`  (
   `projectfullname` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL,
   `projectshortname` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL,
   `userid` bigint(20) NULL DEFAULT NULL,
-  `oderno` int(11) NULL DEFAULT NULL,
+  `orderno` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_bin ROW_FORMAT = Dynamic;
 

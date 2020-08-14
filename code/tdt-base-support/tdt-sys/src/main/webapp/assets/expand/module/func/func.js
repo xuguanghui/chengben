@@ -22,6 +22,7 @@ layui.define(['jquery', 'layer', 'admin', 'table'], function (exports) {
             } else {
                 clientHeight = (document.body.clientHeight > document.documentElement.clientHeight) ? document.body.clientHeight : document.documentElement.clientHeight;
             }
+            console.info("高度 " + clientHeight);
             return clientHeight;
         },
 
